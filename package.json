@@ -21,11 +21,10 @@
   "bugs": {
     "url": "https://github.com/clark-pegg/clark-pegg.github.io/issues"
   },
-  "homepage": "https://github.com/clark-pegg/clark-pegg.github.io/",
+  "homepage": "https://clark-pegg.github.io",
   "devDependencies": {
     "eslint": "^8.36.0",
-    "eslint-plugin-react": "^7.32.2",
-    "gh-pages": "^5.0.0"
+    "eslint-plugin-react": "^7.32.2"
   },
   "dependencies": {
     "next": "^13.2.4",
