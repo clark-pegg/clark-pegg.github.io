@@ -1,0 +1,26 @@
+{
+  "name": "clark-pegg.github.io",
+  "version": "1.0.0",
+  "description": "Code for Clark Pegg's Github Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clark-pegg/clark-pegg.github.io.git"
+  },
+  "keywords": [
+    "Pages",
+    "Git"
+  ],
+  "author": "Clark Pegg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clark-pegg/clark-pegg.github.io/issues"
+  },
+  "homepage": "https://github.com/clark-pegg/clark-pegg.github.io/index.html",
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  }
+}
