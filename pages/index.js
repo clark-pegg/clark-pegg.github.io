@@ -1,3 +1,3 @@
-const Home = () => (<h3>Hello there!</h3>)
+import Home from "./Home.js"
 
 export default Home
