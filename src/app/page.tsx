@@ -1,8 +1,27 @@
 import Image from 'next/image'
+import Language from './language'
+import languages from './languages.json'
+import { ReactElement } from 'react'
 
-const Home = () =>
-  (
-    <main className="flex h-screen p-[64px]">
+const Home: () => ReactElement = () => {
+  const languageComponents: Array<ReactElement> = []
+
+  for(const index in languages){
+    const language = languages[index]
+
+    languageComponents.push(
+      <Language
+        key={index}
+        name={language.name} 
+        description={language.description}
+        experience={language.experience}
+        link={language.link}
+      />
+    )
+  }
+
+  return (
+    <main className="flex h-screen px-[64px] py-[82px] overflow-hidden">
       <div className="flex-1 max-w-[254px] m-auto">
         <Image 
           className="rounded"
@@ -13,7 +32,9 @@ const Home = () =>
         />
 
         <div className="flex-1 py-4">
-          <div className="font-bold text-xl mb-2 text-center"> Clark Pegg </div>
+          <div className="font-bold text-xl mb-2 text-center"> 
+            Clark Pegg 
+          </div>
           <div className="text-xl mb-2 text-center"> 
             Full Stack Developer <br/>
             University of Guelph {"'"}23
@@ -52,13 +73,11 @@ const Home = () =>
         </div>
       </div>
 
-      <div className="flex-1 w-full px-[16px]">
-        <div className="flex-1 py-[16px]">TypeScript / Next.js / MySQL</div>
-        <div className="flex-1 py-[16px]">C / C++</div>
-        <div className="flex-1 py-[16px]">Python</div>
-        <div className="flex-1 py-[16px]">Java</div>
+      <div className="flex-1 w-full px-[32px] py-[64px]">
+        {languageComponents}
       </div>
     </main>
   )
+}
 
 export default Home
