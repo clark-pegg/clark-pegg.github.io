@@ -7,9 +7,11 @@ export const metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) =>
   (
-    <body>
-      {children}
-    </body>
+    <html lang="en">
+      <body>
+        {children}
+      </body>
+    </html>
   )
 
 export default RootLayout
