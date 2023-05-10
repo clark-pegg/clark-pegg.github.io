@@ -72,10 +72,11 @@ const Home: () => ReactElement = () => {
           </div>
         </div>
       </div>
-
-      <div className="flex-1 w-full px-[32px] py-[64px]">
+  
+      {/* Removed due to mobile issues*/}
+      {/* <div className="flex-1 w-full px-[32px] py-[64px]">
         {languageComponents}
-      </div>
+      </div> */}
     </main>
   )
 }
