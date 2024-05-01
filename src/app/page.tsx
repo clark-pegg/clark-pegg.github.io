@@ -1,44 +1,32 @@
 import Image from 'next/image'
-import Language from './language'
-import languages from './languages.json'
 import { ReactElement } from 'react'
 
 const Home: () => ReactElement = () => {
-  const languageComponents: Array<ReactElement> = []
-
-  for (const index in languages) {
-    const language = languages[index]
-
-    languageComponents.push(
-      <Language
-        key={index}
-        name={language.name}
-        description={language.description}
-        experience={language.experience}
-        link={language.link}
-      />
-    )
-  }
-
   return (
     <main className="flex h-screen px-[64px] py-[82px] overflow-hidden">
-      <div className="flex-1 max-w-[254px] m-auto">
+      <div className="flex-1 max-w-[400px] m-auto">
         <Image
           className="rounded"
-          width="254"
-          height="315"
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ width: '100%', height: 'auto' }} // optional
           src="https://avatars.githubusercontent.com/u/103555086?v=4" // Copy from Github
           alt="image"
         />
 
-        <div className="flex-1 py-4">
+        <div className="flex-1 py-4 text-center">
           <div className="font-bold text-xl mb-2 text-center">
-            Clark Pegg
+            Clark Pegg {"(clarktpegg@outlook.com)"}
+          </div>
+          <div className="font-medium text-xl mb-2 text-center">
+            Cyber Security Analyst
           </div>
           <div className="text-xl mb-2 text-center">
-            Cyber Security Analyst <br />
-            University of Guelph {"'"}23
+            University of Guelph Computer Science {"'"}23 <br />
+            Lighthouse Labs Cyber Security {"'"}24
           </div>
+          See my projects on my GitHub
         </div>
 
         <div className="flex py-4 place-content-center">
@@ -65,17 +53,7 @@ const Home: () => ReactElement = () => {
             </svg>
           </a>
         </div>
-
-        <div className="flex-1 py-4">
-          <div className="text-m mb-2 text-center">
-            clarktpegg@outlook.com
-          </div>
-        </div>
       </div>
-
-      {/* <div className="flex-1 w-full px-[32px] py-[64px]">
-        {languageComponents}
-      </div> */}
     </main>
   )
 }
